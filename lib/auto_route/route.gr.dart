@@ -24,7 +24,7 @@ abstract class _$AppRouter extends RootStackRouter {
     CategoryRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const CategoryPage(),
+        child: const CategoryPasswordPage(),
       );
     },
     ListServiseRoute.name: (routeData) {
@@ -51,7 +51,7 @@ class AuthRoute extends PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [CategoryPage]
+/// [CategoryPasswordPage]
 class CategoryRoute extends PageRouteInfo<void> {
   const CategoryRoute({List<PageRouteInfo>? children})
       : super(
