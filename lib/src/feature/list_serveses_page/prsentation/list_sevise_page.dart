@@ -8,12 +8,12 @@ class ListServisePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
+      appBar: AppBar(
+        title: const Text('Лист паролей'),
+      ),
+      body: const SafeArea(
         child: Center(
-          child: ElevatedButton(
-            child: const Text('Войти'),
-            onPressed: () {},
-          ),
+          child: Text('Конец'),
         ),
       ),
     );

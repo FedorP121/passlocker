@@ -1,5 +1,6 @@
-import 'package:auto_route/annotations.dart';
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:untitled9/auto_route/route.dart';
 
 @RoutePage()
 class CategoryPage extends StatelessWidget {
@@ -8,12 +9,15 @@ class CategoryPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: const Text('Категории паролей'),
+      ),
       body: SafeArea(
         child: Center(
           child: ElevatedButton(
             child: const Text('Войти'),
-            onPressed: () {},
+            onPressed: () =>
+                AutoRouter.of(context).push(const ListServiseRoute()),
           ),
         ),
       ),

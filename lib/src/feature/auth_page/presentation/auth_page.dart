@@ -1,5 +1,6 @@
-import 'package:auto_route/annotations.dart';
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:untitled9/auto_route/route.dart';
 
 @RoutePage()
 class AuthPage extends StatelessWidget {
@@ -12,7 +13,7 @@ class AuthPage extends StatelessWidget {
         child: Center(
           child: ElevatedButton(
             child: const Text('Войти'),
-            onPressed: () {},
+            onPressed: () => AutoRouter.of(context).push(const CategoryRoute()),
           ),
         ),
       ),
