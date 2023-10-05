@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "325182676027",
+    "firebase_url": "https://pwlock-134-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "pwlock-134",
+    "storage_bucket": "pwlock-134.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:325182676027:android:0bd3da2dce4fdad940101e",
+        "android_client_info": {
+          "package_name": "com.example.untitled9"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDqH8NkY5aZXeq9dD-lENvR5tCzzuFXzHA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
