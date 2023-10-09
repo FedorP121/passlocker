@@ -14,7 +14,7 @@ class RegisterFirebasePage extends StatelessWidget {
   Widget build(BuildContext context) {
     final blocAuthFirebase = context.read<AuthPersonBloc>();
     return Scaffold(
-      appBar: customAppBar(
+      appBar: CustomAppBar(
         text: 'Регистрация',
         centerTitle: true,
         onPressedBack: () {

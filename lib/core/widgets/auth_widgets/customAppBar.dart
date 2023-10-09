@@ -1,27 +1,29 @@
-// ignore_for_file: file_names
-
 import 'package:flutter/material.dart';
 
-PreferredSizeWidget customAppBar({
-  required String text,
-  required bool centerTitle,
-  required VoidCallback onPressedBack,
-}) {
-  return AppBar(
-    centerTitle: centerTitle,
-    title: Text(text),
-    leading: IconButton(
-      icon: const Icon(Icons.arrow_back),
-      onPressed: onPressedBack,
-    ),
-  );
-}
+class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
+  const CustomAppBar({
+    Key? key,
+    required this.onPressedBack,
+    required this.centerTitle,
+    required this.text,
+  }) : super(key: key);
 
-/*
-{
-        // Ваш код для выполнения при нажатии на кнопку назад
-        // Например, вернуться на предыдущую страницу:
-        // Navigator.of(context).pop();
-        // или выполнить другое действие
-      },
-*/
+  final VoidCallback onPressedBack;
+  final bool centerTitle;
+  final String text;
+
+  @override
+  Widget build(BuildContext context) {
+    return AppBar(
+      centerTitle: centerTitle,
+      title: Text(text),
+      leading: IconButton(
+        icon: const Icon(Icons.arrow_back),
+        onPressed: onPressedBack,
+      ),
+    );
+  }
+
+  @override
+  Size get preferredSize => const Size.fromHeight(kToolbarHeight);
+}
