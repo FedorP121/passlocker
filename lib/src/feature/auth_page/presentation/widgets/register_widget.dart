@@ -35,17 +35,17 @@ class _RegisterWidgetState extends State<RegisterWidget> {
 
     return Column(
       children: [
-        customTextField(
+        CustomTextField(
           controller: emailController,
           labelText: 'Почта',
         ),
         const SizedBox(height: 20),
-        customTextField(
+        CustomTextField(
           controller: passwordController,
           labelText: 'Пароль',
         ),
         const SizedBox(height: 20),
-        customTextField(
+        CustomTextField(
           controller: passwordTwoController,
           labelText: 'Повторите пароль',
         ),
@@ -72,7 +72,7 @@ class _RegisterWidgetState extends State<RegisterWidget> {
             if (state is ErrorRegisterState) {
               return Column(
                 children: [
-                  customElevatedButton(
+                  CusttomElevatedButton(
                     widget: const Text('Регистрация'),
                     onPressed: () => blocAuthFirebase.add(
                       RegisterNewAcountEvent(
@@ -89,14 +89,14 @@ class _RegisterWidgetState extends State<RegisterWidget> {
             }
 
             if (state is LoadingRegisterState) {
-              return customElevatedButton(
+              return CusttomElevatedButton(
                 widget: const CircularProgressIndicator(),
                 onPressed: () {},
               );
             }
 
             if (state is StartRegisterState) {
-              return customElevatedButton(
+              return CusttomElevatedButton(
                 widget: const Text('Регистрация'),
                 onPressed: () => blocAuthFirebase.add(
                   RegisterNewAcountEvent(
@@ -150,7 +150,7 @@ class _RegisterWidgetState extends State<RegisterWidget> {
               );
             }
 
-            return customElevatedButton(
+            return CusttomElevatedButton(
               widget: const Text('Регистрация'),
               onPressed: () => blocAuthFirebase.add(
                 RegisterNewAcountEvent(

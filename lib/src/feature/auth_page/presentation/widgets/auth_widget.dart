@@ -31,12 +31,12 @@ class _AuthWidgetState extends State<AuthWidget> {
       children: [
         Column(
           children: [
-            customTextField(
+            CustomTextField(
               controller: emailController,
               labelText: 'Почта',
             ),
             const SizedBox(height: 20),
-            customTextField(
+            CustomTextField(
               controller: passwordController,
               labelText: 'Пароль',
             ),
@@ -141,7 +141,7 @@ class VericationMailFirebaseWidget extends StatelessWidget {
       children: [
         Text(message),
         const SizedBox(height: 20),
-        customElevatedButton(
+        CusttomElevatedButton(
           widget: const Text('Войти'),
           onPressed: () =>
               // AutoRouter.of(context).replace(const CategoryPasswordRoute()),
@@ -201,7 +201,7 @@ class LoadingStateWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return customElevatedButton(
+    return CusttomElevatedButton(
       widget: const CircularProgressIndicator(),
       onPressed: () {},
     );
@@ -222,7 +222,7 @@ class StartStateWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final blocAuthFirebase = context.read<AuthPersonBloc>();
-    return customElevatedButton(
+    return CusttomElevatedButton(
         widget: const Text('Войти'),
         onPressed: () {
           blocAuthFirebase.add(LoginInAcountEvent(
@@ -252,7 +252,7 @@ class ErrorFirebaseStateWidget extends StatelessWidget {
     final blocAuthFirebase = context.read<AuthPersonBloc>();
     return Column(
       children: [
-        customElevatedButton(
+        CusttomElevatedButton(
           widget: const Text('Войти'),
           onPressed: () => blocAuthFirebase.add(LoginInAcountEvent(
             mail: emailController.text,
@@ -286,7 +286,7 @@ class ErrorLoginFirebaseStateWidget extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        customElevatedButton(
+        CusttomElevatedButton(
           widget: const Text('Войти'),
           onPressed: () => blocAuthFirebase.add(LoginInAcountEvent(
             mail: emailController.text,

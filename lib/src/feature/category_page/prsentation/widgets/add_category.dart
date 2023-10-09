@@ -58,11 +58,11 @@ class _ColumnTextFieldState extends State<ColumnTextField> {
     final passLockerBloc = context.read<PassLockerBloc>();
     return Column(
       children: [
-        customTextField(controller: namePassword, labelText: 'Имя пароля'),
+        CustomTextField(controller: namePassword, labelText: 'Имя пароля'),
         const SizedBox(height: 14),
-        customTextField(controller: password, labelText: 'Пароль'),
+        CustomTextField(controller: password, labelText: 'Пароль'),
         const SizedBox(height: 14),
-        customTextField(controller: discripcion, labelText: 'Описание'),
+        CustomTextField(controller: discripcion, labelText: 'Описание'),
         const SizedBox(height: 14),
         ElevatedButton(
           child: const Text('Сохранить'),

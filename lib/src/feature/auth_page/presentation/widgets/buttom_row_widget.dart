@@ -16,7 +16,7 @@ class ButtomRowWidget extends StatelessWidget {
       children: [
         Expanded(
           flex: 1,
-          child: customTextButtom(
+          child: CustomTextButtom(
               text: 'Забыл пароль',
               onPressed: () {
                 blocAuthFirebase.add(StartRecoveryPageEvent());
@@ -25,7 +25,7 @@ class ButtomRowWidget extends StatelessWidget {
         ),
         Expanded(
           flex: 1,
-          child: customTextButtom(
+          child: CustomTextButtom(
               text: 'Регистрация',
               onPressed: () {
                 blocAuthFirebase.add(StartRegisterPageEvent());

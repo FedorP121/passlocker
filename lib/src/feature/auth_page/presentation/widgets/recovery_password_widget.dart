@@ -29,7 +29,7 @@ class _RecoveryPasswordWidgetState extends State<RecoveryPasswordWidget> {
     return Column(
       children: [
         const SizedBox(height: 20),
-        customTextField(
+        CustomTextField(
           controller: emailController,
           labelText: 'Введите почту',
         ),
@@ -45,7 +45,7 @@ class _RecoveryPasswordWidgetState extends State<RecoveryPasswordWidget> {
                   Text(state.message),
                   const Text('Откройте письмо и измените свой пароль'),
                   const SizedBox(height: 20),
-                  customElevatedButton(
+                  CusttomElevatedButton(
                     widget: const Text('Войти в аккаунт'),
                     onPressed: () => AutoRouter.of(context).pop(),
                   ),
@@ -56,7 +56,7 @@ class _RecoveryPasswordWidgetState extends State<RecoveryPasswordWidget> {
             if (state is ErrorPaswordState) {
               return Column(
                 children: [
-                  customElevatedButton(
+                  CusttomElevatedButton(
                     widget: const Text('Отправить письмо на почту'),
                     onPressed: () =>
                         blocAuthFirebase.add(SendPasswordResetEmailEvent(
@@ -73,7 +73,7 @@ class _RecoveryPasswordWidgetState extends State<RecoveryPasswordWidget> {
             }
 
             if (state is StartRecoveryPasswordState) {
-              return customElevatedButton(
+              return CusttomElevatedButton(
                 widget: const Text('Отправить письмо на почту'),
                 onPressed: () => blocAuthFirebase.add(
                   SendPasswordResetEmailEvent(
@@ -83,7 +83,7 @@ class _RecoveryPasswordWidgetState extends State<RecoveryPasswordWidget> {
               );
             }
 
-            return customElevatedButton(
+            return CusttomElevatedButton(
               widget: const Text('Отправить письмо на почту'),
               onPressed: () => blocAuthFirebase.add(SendPasswordResetEmailEvent(
                 email: emailController.text,
