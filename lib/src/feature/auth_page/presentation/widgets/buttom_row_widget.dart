@@ -2,7 +2,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:untitled9/core/auto_route/route.dart';
-import 'package:untitled9/core/widgets/auth_widgets/text_buttom.dart';
+import 'package:untitled9/core/widgets/widgets.dart';
 
 import '../bloc/auth_person_bloc.dart';
 

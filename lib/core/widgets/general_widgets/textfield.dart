@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+part of '../widgets.dart';
 
 class CustomTextField extends StatelessWidget {
   const CustomTextField({
@@ -12,6 +12,12 @@ class CustomTextField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return TextField(
+      controller: controller,
+      decoration: InputDecoration(
+        labelText: labelText,
+        border: const OutlineInputBorder(),
+      ),
+    );
   }
 }

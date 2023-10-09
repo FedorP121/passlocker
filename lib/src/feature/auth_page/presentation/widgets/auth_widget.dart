@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
-import 'package:untitled9/core/widgets/auth_widgets/elevatet_buttom.dart';
-import 'package:untitled9/core/widgets/auth_widgets/textfield.dart';
+import 'package:untitled9/core/widgets/widgets.dart';
 
 import '../bloc/auth_person_bloc.dart';
 

@@ -1,8 +1,7 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
-import 'package:untitled9/core/widgets/auth_widgets/textfield.dart';
+import 'package:untitled9/core/widgets/widgets.dart';
 import 'package:untitled9/src/feature/category_page/domain/entities/password_model.dart';
 import 'package:untitled9/src/feature/category_page/prsentation/bloc/category_pass_bloc.dart';
 

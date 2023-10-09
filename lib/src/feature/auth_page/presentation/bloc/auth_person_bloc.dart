@@ -1,4 +1,3 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:equatable/equatable.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -19,13 +18,6 @@ part 'auth_person_state.dart';
 
 @injectable
 class AuthPersonBloc extends Bloc<AuthPersonEvent, AuthPersonState> {
-  final OnLoginFirebaseAcount firebaseAcount;
-  final RegistracionNewFirebaseAcount registracionNewFirebaseAcount;
-  final CheckVerificationMailFirebase verificationMailFirebase;
-  final SendVerificationMailFirebase sendVerificationMailFirebase;
-  final SendPasswordResetEmail sendPasswordResetEmail;
-  final CheckUserStatus checkUserStatus;
-  final LogOutFirebaseAcount logOutFirebaseAcount;
   AuthPersonBloc(
     this.firebaseAcount,
     this.registracionNewFirebaseAcount,
@@ -47,6 +39,14 @@ class AuthPersonBloc extends Bloc<AuthPersonEvent, AuthPersonState> {
     on<AuthCheckEvent>(_authCheckEvent);
     on<LogOutEvent>(_logOutEvent);
   }
+
+  final OnLoginFirebaseAcount firebaseAcount;
+  final RegistracionNewFirebaseAcount registracionNewFirebaseAcount;
+  final CheckVerificationMailFirebase verificationMailFirebase;
+  final SendVerificationMailFirebase sendVerificationMailFirebase;
+  final SendPasswordResetEmail sendPasswordResetEmail;
+  final CheckUserStatus checkUserStatus;
+  final LogOutFirebaseAcount logOutFirebaseAcount;
 
   void _correctCodeEvent(
     CorrectCodeEvent event,
@@ -188,7 +188,6 @@ class AuthPersonBloc extends Bloc<AuthPersonEvent, AuthPersonState> {
     AuthCheckEvent event,
     Emitter<AuthPersonState> emit,
   ) async {
-    emit(LoadingState());
     final userStatusStream = checkUserStatus.call(NoParams());
 
     await for (var either in userStatusStream) {

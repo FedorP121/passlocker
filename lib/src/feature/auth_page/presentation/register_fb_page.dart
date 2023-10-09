@@ -1,7 +1,8 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:untitled9/core/widgets/auth_widgets/customAppBar.dart';
+import 'package:untitled9/core/widgets/widgets.dart';
+
 import 'package:untitled9/src/feature/auth_page/presentation/bloc/auth_person_bloc.dart';
 
 import 'widgets/register_widget.dart';
